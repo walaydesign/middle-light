@@ -1,6 +1,12 @@
 AOS.init({startEvent: 'load'});
 window.addEventListener('load', AOS.refresh);
 
+$(".header_item").click(function(){
+    let target = $(this).data("target");
+    var top = $(target).offset().top - 55;
+    $("html, body").animate({ scrollTop: top }, parseInt(300));
+})
+
 var swiperBuilding = new Swiper(".building_swiper", {
     slidesPerView: 1,
     loop: true,
@@ -9,6 +15,25 @@ var swiperBuilding = new Swiper(".building_swiper", {
         disableOnInteraction: false,
     },
     speed: 800,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+})
+
+var swiperSilent = new Swiper(".silent_swiper", {
+    slidesPerView: 1,
+    loop: true,
+    parallax: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 })
 
 var swiperInternational = new Swiper(".international_swiper", {
@@ -22,5 +47,27 @@ var swiperInternational = new Swiper(".international_swiper", {
     navigation: {
         nextEl: "#international_next",
         prevEl: "#international_prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+})
+
+var swiperLuxury = new Swiper(".luxury_swiper", {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
+    navigation: {
+        nextEl: "#luxury_next",
+        prevEl: "#luxury_prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
 })

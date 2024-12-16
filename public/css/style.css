@@ -110,6 +110,16 @@ main {
   letter-spacing: 0.1em;
 }
 
+.swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
 .kv {
   position: relative;
 }
@@ -161,6 +171,10 @@ main {
   color: #fff;
 }
 
+.building_swiper {
+  position: relative;
+}
+
 .building_swiper_item {
   position: relative;
   width: 100%;
@@ -190,6 +204,20 @@ main {
 
 .building_swiper_text .title {
   margin-left: 20px;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .prize {
@@ -235,6 +263,24 @@ main {
   font-size: 50px;
 }
 
+.silent_pic .title.bottomleft {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  top: inherit;
+  bottom: 4.3vw;
+}
+
+.silent_pic .title.bottomright {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  top: inherit;
+  bottom: 4.3vw;
+  left: inherit;
+  right: 14%;
+}
+
 .silent_text {
   padding: 40px 0 90px;
   text-align: center;
@@ -247,6 +293,10 @@ main {
   margin-bottom: 15px;
   letter-spacing: 0.1em;
   font-weight: 700;
+}
+
+.silent_swiper {
+  position: relative;
 }
 
 .swiper-common {
@@ -273,6 +323,7 @@ main {
 
 .swiper-common_main {
   width: 80%;
+  overflow: hidden;
 }
 
 .swiper-common_main .swiper-slide {
@@ -328,6 +379,10 @@ main {
   margin-bottom: 65px;
 }
 
+.international_swiper {
+  position: relative;
+}
+
 .luxury {
   margin-bottom: 115px;
 }
@@ -355,6 +410,10 @@ main {
 
 .luxury .swiper-common_text .text-common {
   margin: 0;
+}
+
+.luxury_swiper {
+  position: relative;
 }
 
 .contact {
