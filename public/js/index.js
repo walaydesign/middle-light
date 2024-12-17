@@ -25,10 +25,10 @@ var swiperSilent = new Swiper(".silent_swiper", {
     slidesPerView: 1,
     loop: true,
     parallax: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     speed: 800,
     pagination: {
       el: ".swiper-pagination",
@@ -71,3 +71,17 @@ var swiperLuxury = new Swiper(".luxury_swiper", {
       clickable: true,
     },
 })
+
+$(window).on("resize", function() {
+    mapResize();
+})
+mapResize();
+
+function mapResize() {
+    if($(window).width() <= 991) {
+        let mapWidth = $(".map_pic").height() * 1.78;
+        let windowWidth = $(window).width();
+        let mapX = (mapWidth - windowWidth) * 0.3;
+        $(".map_inner").animate({scrollLeft: mapX});
+    }
+}
