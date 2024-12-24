@@ -771,12 +771,18 @@ main {
 }
 
 @media screen and (max-width: 767px) {
+  .contact {
+    background-image: none;
+  }
   .contact_logo {
-    width: 15.99%;
+    width: 25%;
   }
   .contact h2, .contact h3 {
     font-size: 22px;
     margin-bottom: 15px;
+  }
+  .contact h3 {
+    line-height: 1.6;
   }
   .contact_form {
     max-width: 400px;

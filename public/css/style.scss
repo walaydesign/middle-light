@@ -685,12 +685,16 @@ main {
         font-weight: 700;
     }
     @media screen and (max-width: 767px) {
+        background-image: none;
         &_logo {
-            width: 15.99%;
+            width: 25%;
         }
         h2, h3 {
             font-size: 22px;
             margin-bottom: 15px;
+        }
+        h3 {
+            line-height: 1.6;
         }
         &_form {
             max-width: 400px;
