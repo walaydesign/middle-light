@@ -276,19 +276,19 @@
         <div class="contact" id="reserve">
             <img class="contact_logo" src="./public/img/logo-2.svg" alt="">
             <h3>92-115坪<span class="d-md-inline d-none">｜</span><br class="d-md-none">戶戶獨棟 精萃四席</h3>
-            <form action="" class="contact_form">
+            <form action="" class="contact_form" onsubmit="sendEmail(); reset(); return false">
                 <h2>預約賞屋</h2>
                 <div class="contact_form_item">
                     <label for="">貴賓姓名</label>
-                    <input type="text">
+                    <input type="text" id="name">
                 </div>
                 <div class="contact_form_item">
                     <label for="">聯絡電話</label>
-                    <input type="number">
+                    <input type="number" id="phone">
                 </div>
                 <div class="contact_form_item">
                     <label for="">居住城市</label>
-                    <input type="text">
+                    <input type="text" id="city">
                 </div>
                 <button>預約送出</button>
             </form>

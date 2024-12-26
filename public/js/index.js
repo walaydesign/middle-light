@@ -25,10 +25,6 @@ var swiperSilent = new Swiper(".silent_swiper", {
     slidesPerView: 1,
     loop: true,
     parallax: true,
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
     speed: 800,
     pagination: {
       el: ".swiper-pagination",
@@ -84,4 +80,18 @@ function mapResize() {
         let mapX = (mapWidth - windowWidth) * 0.3;
         $(".map_inner").animate({scrollLeft: mapX});
     }
+}
+
+function sendEmail(){
+    Email.send({
+        SecureToken: "8207c7d7-4a6c-4797-870d-d16ee71023ce",
+        To : "tim60108@gmail.com, u27875@gmail.com, zhulixdesign@gmail.com, zhuliservice@gmail.com",
+        From : "walayydesign@gmail.com",
+        Subject : "中光極預約賞屋",
+        Body : "貴賓姓名:" + document.getElementById("name").value
+                + "<br>聯絡電話:" + document.getElementById("phone").value
+                + "<br>居住城市:" + document.getElementById("city").value
+    }).then(
+        message => alert("感謝您的來信！我們很快就會和您聯繫！"),
+    );
 }
